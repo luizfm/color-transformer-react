@@ -7,15 +7,12 @@ import {
 
 import App from '../App'
 
-const Routes = () => {
-  console.log('aqui')
-  return (
-    <Router>
-      <Switch>
-        <Route path="/" element={<App />} />
-      </Switch>
-    </Router>
-  )
-}
+const Routes = () => (
+  <Router>
+    <Switch>
+      <Route path="/" element={<App />} />
+    </Switch>
+  </Router>
+)
 
 export default Routes

@@ -24,7 +24,6 @@ const COLOR_TRANSFORMERS = {
 }
 
 const App = () => {
-  console.log('aqui')
   const [hexColor, setHexColor] = useState('#c9c9c9')
   const [redColor, setRedColor] = useState('')
   const [blueColor, setBlueColor] = useState('')
