@@ -16,6 +16,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
+    publicPath: '/', // Public path is necessary to be able to use multiple paths e.g /foo/bar/:doeId
   },
   devServer: {
     static: {
