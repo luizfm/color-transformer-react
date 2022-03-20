@@ -1,6 +1,7 @@
 const path = require('path')
 const HtmlWebPackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const webpack = require('webpack')
 
 const isDevelopment = process.env.NODE_ENV !== 'production'
 
@@ -11,10 +12,16 @@ const htmlPlugin = new HtmlWebPackPlugin({
   filename: './index.html',
 })
 
+const productionPlugin = new webpack.DefinePlugin({
+  'process.env': {
+    NODE_ENV: JSON.stringify('production'),
+  },
+})
+
 module.exports = {
   mode: isDevelopment ? 'development' : 'production',
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.join(__dirname, 'dist'),
     filename: 'bundle.js',
     publicPath: '/', // Public path is necessary to be able to use multiple paths e.g /foo/bar/:doeId
   },
@@ -79,5 +86,5 @@ module.exports = {
       _services: path.resolve(__dirname, 'src/services'),
     },
   },
-  plugins: [htmlPlugin, miniCssPlugin],
+  plugins: [htmlPlugin, miniCssPlugin, productionPlugin],
 }
