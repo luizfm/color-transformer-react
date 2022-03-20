@@ -1,5 +1,9 @@
 import React from 'react'
-import { HashRouter as Router, Routes as Switch, Route } from 'react-router-dom'
+import {
+  BrowserRouter as Router,
+  Routes as Switch,
+  Route,
+} from 'react-router-dom'
 
 import App from '../App'
 

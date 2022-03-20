@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 /* eslint-disable comma-dangle */
-// import React, { useState, useCallback, useEffect } from 'react'
+import React, { useState, useCallback, useEffect } from 'react'
 // import { animated, useTransition } from 'react-spring'
 
 // import StormTrooperIcon from '_assets/icons/stormtrooper-icon.svg'
@@ -151,6 +151,8 @@
 // }
 
 const App = () => (
-  <h1>Hello World</h1>
+  <>
+    <h1>Hello World</h1>
+  </>
 )
 export default App
