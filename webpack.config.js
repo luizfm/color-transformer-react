@@ -19,10 +19,10 @@ module.exports = {
     publicPath: '/', // Public path is necessary to be able to use multiple paths e.g /foo/bar/:doeId
   },
   devServer: {
+    historyApiFallback: true,
     static: {
       directory: path.join(__dirname, 'public'),
     },
-    historyApiFallback: true,
     compress: true,
     port: 3000,
   },
